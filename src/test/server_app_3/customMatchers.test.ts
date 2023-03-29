@@ -4,7 +4,7 @@ expect.extend({
   toBeValidReservation(reservation: Reservation) {
     const validId = reservation.id.length > 5 ? true : false;
 
-    const validUser = reservation.id.length > 5 ? true : false;
+    const validUser = reservation.user.length > 5 ? true : false;
 
     return {
       pass: validId && validUser,
@@ -41,6 +41,8 @@ const someReservation: Reservation = {
 };
 
 describe("custom matchers test", () => {
-  expect(someReservation).toBeValidReservation();
-  expect(someReservation).toHaveUser("someUser");
+  it("check for valid reservation", () => {
+    expect(someReservation).toBeValidReservation();
+    expect(someReservation).toHaveUser("someUser");
+  });
 });
