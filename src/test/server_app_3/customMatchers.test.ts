@@ -42,5 +42,5 @@ const someReservation: Reservation = {
 
 describe("custom matchers test", () => {
   expect(someReservation).toBeValidReservation();
-  expect(someReservation).toHaveUser("someOtherUser");
+  expect(someReservation).toHaveUser("someUser");
 });
