@@ -1,5 +1,7 @@
-
-
 export function toUpperCase(arg) {
-    return arg.toUpperCase();
+  return arg.toUpperCase();
 }
+
+module.exports = {
+  toUpperCase,
+};
